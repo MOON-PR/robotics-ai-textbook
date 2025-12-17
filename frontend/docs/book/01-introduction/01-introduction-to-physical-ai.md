@@ -178,7 +178,7 @@ This textbook combines:
 ### Option 2: Local Development
 ```bash
 # Clone the repository
-git clone https://github.com/robotics-ai-textbook
+git clone https://github.com/MOON-PR/robotics-ai-textbook
 
 # Install dependencies
 cd frontend

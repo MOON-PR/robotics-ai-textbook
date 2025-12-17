@@ -236,11 +236,11 @@ Unlike scattered online tutorials, this textbook provides:
 
 ---
 
-## Ready to Begin?
+<!-- ## Ready to Begin?
 
 <a href="/docs/book/01-introduction/01-what-is-robotics" class="button button--primary button--lg">Start Chapter 1: Introduction to Physical AI</a>
 
-Or explore any chapter using the sidebar navigation.
+Or explore any chapter using the sidebar navigation. -->
 
 **Happy Learning!** 🚀🤖
 

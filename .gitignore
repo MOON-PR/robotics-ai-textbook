@@ -1,0 +1,22 @@
+# Universal patterns
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+.idea/
+*.log
+.env*
+
+# Project-specific patterns
+history/
+specs/1-ai-robotics-textbook/
+
+# Python-specific patterns
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+*.egg-info/
+.specify/memory/

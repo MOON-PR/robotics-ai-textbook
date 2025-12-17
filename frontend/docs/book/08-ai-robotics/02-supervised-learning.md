@@ -1,0 +1,101 @@
+---
+sidebar_position: 2
+title: Supervised Learning
+id: book-08-ai-robotics-02-supervised-learning
+---
+
+## 06-Project 5: Simple Visual Object Tracking Robot
+
+This project introduces basic computer vision into a mobile robot. You will build a robot that uses a camera to detect a colored object (e.g., a red ball) and then autonomously move towards and track that object. This project integrates perception, decision-making, and motor control based on visual input.
+
+### 6.1 Objective
+
+Build a mobile robot (preferably using an ESP32-CAM or Raspberry Pi for camera processing) that detects a specific colored object (e.g., a red ball) and tracks its movement by driving towards it and keeping it centered in its field of view.
+
+### 6.2 Key Concepts Covered
+
+*   **Electronics:** Mobile robot platform, motors, motor drivers, ESP32-CAM/Raspberry Pi.
+*   **Programming:** Python (for Raspberry Pi/MicroPython on ESP32) or C++ (for more advanced ESP32-CAM/ESP-IDF setups), image processing (color thresholding), basic object detection, motor control.
+*   **Computer Vision:** Color space conversion (HSV), thresholding, morphological operations, contour detection, centroid calculation.
+*   **Actuators:** DC motor control based on visual feedback.
+*   **Algorithms:** Simple visual servoing (proportional control based on object position).
+
+### 6.3 Materials Required
+
+#### 6.3.1 Hardware Components
+
+*   **ESP32-CAM (or Raspberry Pi Zero W / Raspberry Pi 3/4):** 1 (This will be the brain for image processing)
+    *   **ESP32-CAM:** More compact, lower power. Requires external motor driver.
+    *   **Raspberry Pi:** More powerful, easier to work with Python/OpenCV. Can often directly drive motor drivers.
+*   **Robot Chassis:** A small mobile robot chassis with two DC gear motors and wheels.
+*   **DC Gear Motors:** 2
+*   **Wheels:** 2
+*   **Caster Wheel/Skid:** 1
+*   **L298N Motor Driver Module (or equivalent for ESP32/Pi):** 1
+    *   **Note:** For Raspberry Pi, dedicated HATs with motor drivers are available and simplify wiring.
+*   **Battery Pack/Holder (6-12V):** 1 (for motor driver power)
+*   **USB Power Bank (for ESP32-CAM/Raspberry Pi):** Crucial for powering the camera board independently.
+*   **Jumper Wires:** For connecting components on a breadboard.
+    `N_1 = (N cdot text{sum_xy}) - (text{sum_x} cdot text{sum_y})`
+    `D_1 = (N cdot text{sum_x_sq}) - (text{sum_x})^2`
+    `m = N_1 / D_1`
+
+    And for the intercept `b`:
+```latex
+b = frac{text{sum_y} - m cdot text{sum_x}{N}
+```
+
+    Where:
+    *   `N` is the number of data points.
+    *   `text{sum_x}` is the sum of all `x` values.
+    *   `text{sum_y}` is the sum of all `y` values.
+    *   `text{sum_xy}` is the sum of products of `x_i y_i`.
+    *   `text{sum_x_sq}` is the sum of squares of `x_i`.
+
+--- 
+
+### MCQs with Answers
+
+1.  Which supervised learning task is used when the model needs to predict a **discrete class label** for a given input (e.g., "Normal", "Faulty")?
+    a) Regression
+    b) Clustering
+    c) Classification
+    d) Dimensionality Reduction
+    *Answer: c) Classification*
+
+2.  A robot uses sensor data to predict the **remaining useful life** (a continuous number in hours) of its motor before failure. This is an example of what type of supervised learning?
+    a) Classification
+    b) Regression
+    c) Unsupervised Learning
+    d) Reinforcement Learning
+    *Answer: b) Regression*
+
+3.  To prevent **overfitting** in supervised learning, which dataset is typically used to tune the model's hyperparameters and evaluate its performance during training?
+    a) Training Set
+    b) Validation Set
+    c) Test Set
+    d) All of the above
+    *Answer: b) Validation Set*
+
+--- 
+
+### Practice Tasks
+
+1.  **Robot Terrain Classification:** You are building a mobile robot that needs to classify the terrain it's on (e.g., "smooth," "rough," "water"). It has a sensor that provides two features: (vibration magnitude, wheel slip). You have collected labeled data. Describe how you would use a K-Nearest Neighbors (K-NN) classifier to train the robot for this task.
+2.  **Predicting Robot Power Consumption:** A robot needs to estimate its power consumption (in Watts, a continuous value) based on its current speed (m/s) and payload (kg). You have collected data. Which supervised learning algorithm would be most appropriate for this task, and why?
+3.  **Decision Tree for Fault Diagnosis:** Design a simple decision tree (conceptually, draw it out) for a robot's fault diagnosis. The robot has two sensors (Temperature, Current) and needs to diagnose "Normal," "Overheat," or "Overcurrent." For example, if Temp > X and Current < Y -> Overheat.
+
+--- 
+
+### Notes for Teachers
+
+*   **Illustrate Labeled Data:** Emphasize the importance of labeled data for supervised learning, contrasting it with human learning.
+*   **Feature Engineering:** Discuss how selecting good features (e.g., from sensor data) is critical for model performance.
+*   **Overfitting Intuition:** Explain overfitting with a simple analogy (e.g., memorizing answers instead of understanding the concept).
+
+### Notes for Students
+
+*   **Data is Key:** The quality and quantity of your labeled training data directly impact the performance of your supervised learning models.
+*   **No Free Lunch:** No single algorithm is best for all problems. The choice depends on your data and the task.
+*   **Evaluation Metrics:** Understand accuracy, precision, recall, F1-score (for classification) and MSE, RMSE (for regression) to evaluate your models.
+*   **Preprocessing Matters:** Scaling features (e.g., using `StandardScaler` in Python) is often essential for many ML algorithms.

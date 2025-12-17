@@ -1,0 +1,76 @@
+# book.spec.yaml for AI-Native Textbook on Physical AI & Humanoid Robotics
+
+metadata:
+  title: "AI-Native Textbook: Physical AI & Humanoid Robotics"
+  author: "Gemini CLI"
+  version: "1.0.0"
+  description: "An interactive textbook for Physical AI & Humanoid Robotics, featuring RAG chatbot, personalization, and Urdu translation."
+  license: "MIT"
+  language: "en"
+  # Flesch-Kincaid grade 9–12 level (This will be a goal for content generation, not directly in spec)
+
+chapters:
+  - id: intro
+    title: "Introduction to Physical AI"
+    content: |
+      This chapter provides an introduction to the field of Physical AI and its foundational concepts.
+      It covers the convergence of robotics, artificial intelligence, and embodiment.
+    sections:
+      - id: what-is-physical-ai
+        title: "What is Physical AI?"
+        content: "Defining Physical AI as the intelligence embedded in physical systems."
+      - id: history
+        title: "A Brief History of AI and Robotics"
+        content: "Key milestones in the development of AI and robotics leading to Physical AI."
+
+  - id: humanoid-robotics
+    title: "Fundamentals of Humanoid Robotics"
+    content: |
+      Explore the core principles and technologies behind humanoid robots.
+      This includes kinematics, dynamics, control systems, and human-robot interaction.
+    sections:
+      - id: kinematics
+        title: "Robot Kinematics"
+        content: "Understanding the geometry of robot motion."
+      - id: control-systems
+        title: "Control Systems for Humanoids"
+        content: "How humanoid robots maintain balance and execute movements."
+
+  - id: rag-chatbot
+    title: "The RAG Chatbot System"
+    content: |
+      Details on the Retrieval-Augmented Generation (RAG) chatbot integrated into the textbook.
+      Explains how the chatbot provides answers grounded in the textbook content.
+    sections:
+      - id: rag-overview
+        title: "Overview of RAG"
+        content: "Introduction to Retrieval-Augmented Generation principles."
+      - id: chatbot-interaction
+        title: "Interacting with the Chatbot"
+        content: "How users can query the textbook content."
+
+  - id: personalization
+    title: "Personalized Learning Experience"
+    content: |
+      Understanding how the textbook adapts content based on user's learning level.
+      Covers beginner, intermediate, and advanced modes.
+    sections:
+      - id: user-profiles
+        title: "User Profiles and Levels"
+        content: "Defining different learning profiles."
+      - id: content-adaptation
+        title: "Dynamic Content Adaptation"
+        content: "Mechanisms for adjusting content difficulty."
+
+  - id: urdu-translation
+    title: "Urdu Translation Layer"
+    content: |
+      Details on the English to Urdu translation feature.
+      Ensuring accurate and contextual translation for enhanced accessibility.
+    sections:
+      - id: translation-api
+        title: "Translation API Integration"
+        content: "How the translation service works."
+      - id: displaying-translations
+        title: "Displaying Translated Content"
+        content: "Rendering Urdu text within the Docusaurus site."

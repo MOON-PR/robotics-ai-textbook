@@ -1,0 +1,19 @@
+# Git
+.git/
+
+# Docker
+Dockerfile*
+.dockerignore
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Logs and environment variables
+*.log*
+.env*
+
+# Other
+coverage/

@@ -5,3 +5,4 @@ langchain
 transformers
 torch
 pytest
+python-dotenv

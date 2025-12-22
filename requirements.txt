@@ -6,3 +6,4 @@ transformers
 torch
 pytest
 python-dotenv
+sentence-transformers
